@@ -1,0 +1,230 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+body {
+  background-color: rgba(46, 196, 182, 0.25);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.sideContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.leftSide {
+  margin-block-start: 205px;
+  margin-inline-start: 104px;
+  width: 460px;
+}
+
+.logo {
+  width: 78px;
+  height: 80px;
+}
+
+.purpose {
+  font-family: Brown-Regular, Arial;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-block-start: 50px;
+}
+
+.paragraph {
+  margin-block-start: 20px;
+  font-family: Brown-Regular, Arial;
+  font-size: 1em;
+  color: rgba(115, 115, 115, 1);
+  width: 460px;
+}
+
+.mobile-paragraph, .mobile-footer {
+  display: none;
+  visibility: hidden;
+}
+
+.rightSide {
+  margin-inline-start: 120px;
+  width: max-content;
+  height: 679px;
+  margin-block-start: 81px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  box-shadow: 0px 4px 50px 10px rgba(4, 8, 19, 0.1);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 238px 238px;
+  margin-block-start: 40px;
+  margin-inline: 40px;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+label {
+  display: block;
+  font-family: "Sofia Pro", Arial;
+  font-size: 0.87em;
+  font-weight: 600px;
+}
+
+input, select {
+  font-family: "Sofia Pro", Arial;
+  font-size: 0.87em;
+  font-weight: 400;
+  width: 238px;
+  height: 48px;
+  margin-block-start: 10px;
+  border: 1px solid rgba(240, 240, 240, 1);
+  border-radius: 2px;
+  padding-inline-start: 16px;
+}
+
+.bottomSection label {
+  margin-block-start: 30px;
+  margin-inline-start: 40px;
+  font-family: "Sofia Pro", Arial;
+  font-size: 0.87em;
+}
+
+
+
+.bottomSection select, .bottomSection input {
+  width: 500px;
+  height: 48px;
+  border: 1px solid rgba(240, 240, 240, 1);
+  border-radius: 2px;
+  padding-inline-start: 16px;
+  margin-inline-start: 40px;
+  margin-block-start: 10px;
+}
+
+button {
+  width: 500px;
+  height: 48px;
+  background-color: rgba(46, 196, 182, 1);
+  color: rgba(255, 255, 255, 1);
+  margin-inline-start: 40px;
+  font-family: "Sofia Pro", Arial;
+  font-size: 1em;
+  font-weight: 600;
+  margin-block-start: 30px;
+  border: none;  
+}
+
+footer {
+  width: 463px;
+  height: 25px;
+  font-family: "Sofia Pro", Arial;
+  font-size: 0.87em;
+  font-weight: 400;
+  margin-inline-start: 58px;
+  margin-block-start: 16px;
+}
+
+footer a {
+  color: rgba(46, 196, 182, 1);
+  font-family: "Sofia Pro", Arial;
+  font-size: 0.87em;
+  font-weight: 500;
+}
+
+
+@media screen and (max-width: 700px) and (min-width:200px) {
+  *{
+    width: 375px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .default-paragraph, .default-footer {
+    display: none;
+    visibility: hidden;
+  }
+
+  .mobile-paragraph, .mobile-footer {
+    display: block;
+    visibility: visible;
+    width: 330px;
+  }
+  
+  .sideContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightSide, .leftSide {
+    width: 330px;
+    height: max-content;
+    padding: 0;
+  }
+  
+   .details {
+    display: block;
+  }
+
+  .bottomSection select, .bottomSection input, button {
+    width: 238px;
+  }
+ 
+  button {
+    margin-block-end: 30px;
+  }
+
+  footer p {
+    width: 300px;
+    text-align: center;
+    margin-inline-start: 38px;
+  }
+}
