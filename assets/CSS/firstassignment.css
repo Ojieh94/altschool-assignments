@@ -54,12 +54,12 @@ body {
 
 
 
-.sideContainer {
+.side-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.leftSide {
+.left-side {
   margin-block-start: 205px;
   margin-inline-start: 104px;
   width: 460px;
@@ -85,12 +85,12 @@ body {
   width: 460px;
 }
 
-.mobile-paragraph, .mobile-footer {
+.mobile-paragraph, .mobile-footer, .mobile-visible {
   display: none;
   visibility: hidden;
 }
 
-.rightSide {
+.right-side {
   margin-inline-start: 120px;
   width: max-content;
   height: 679px;
@@ -109,11 +109,12 @@ body {
   gap: 24px;
 }
 
+
 label {
   display: block;
   font-family: "Sofia Pro", Arial;
   font-size: 0.87em;
-  font-weight: 600px;
+  font-weight: 600;
 }
 
 input, select {
@@ -128,23 +129,25 @@ input, select {
   padding-inline-start: 16px;
 }
 
-.bottomSection label {
-  margin-block-start: 30px;
-  margin-inline-start: 40px;
+.bottom-section label {
   font-family: "Sofia Pro", Arial;
   font-size: 0.87em;
+  margin-block-start: 30px;
+}
+
+.bottom-section label:first-child {
+  margin-block-start: 6px;
 }
 
 
 
-.bottomSection select, .bottomSection input {
+.bottom-section select, .bottom-section input {
   width: 500px;
   height: 48px;
   border: 1px solid rgba(240, 240, 240, 1);
   border-radius: 2px;
-  padding-inline-start: 16px;
-  margin-inline-start: 40px;
-  margin-block-start: 10px;
+  
+  
 }
 
 button {
@@ -152,12 +155,11 @@ button {
   height: 48px;
   background-color: rgba(46, 196, 182, 1);
   color: rgba(255, 255, 255, 1);
-  margin-inline-start: 40px;
   font-family: "Sofia Pro", Arial;
   font-size: 1em;
   font-weight: 600;
-  margin-block-start: 30px;
   border: none;  
+  margin-block-start: 30px;
 }
 
 footer {
@@ -178,15 +180,15 @@ footer a {
 }
 
 
-@media screen and (max-width: 700px) and (min-width:200px) {
-  *{
-    width: 375px;
+@media screen and (max-width: 375px)  {
+  body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+    width: 375px;
+ }
 
-  .default-paragraph, .default-footer {
+  .default-paragraph, .default-footer, .bottom-section {
     display: none;
     visibility: hidden;
   }
@@ -194,37 +196,91 @@ footer a {
   .mobile-paragraph, .mobile-footer {
     display: block;
     visibility: visible;
-    width: 330px;
+    width: 315px;
+    height: 50px;
   }
   
-  .sideContainer {
+  .side-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
-  .rightSide, .leftSide {
-    width: 330px;
-    height: max-content;
-    padding: 0;
-  }
   
    .details {
     display: block;
+    margin-block-start: 0;
+    width: 100%;
   }
 
-  .bottomSection select, .bottomSection input, button {
-    width: 238px;
+   .logo {
+    width: 38.6px;
+    height: 40px;
+    margin-block-start: 0;
   }
- 
-  button {
+
+   .purpose {
+    width: 327px;
+    height: 50px;
+    font-size: 1.85em;
+    margin-block-start: 40px;
+   }
+
+   .mobile-paragraph {
+    width: 330px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: 300;
+   }
+
+   .mobile-visible {
+    display: block;
+    visibility: visible;
+   }
+
+   .left-side {
+     margin-block-start: 74px;
+   }
+
+   .right-side, .left-side, .bottom-section {
+      width: 327px;
+   }
+
+   .right-side {
+     height: max-content;
+     width: 327px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-block-start: 40px;
+   }
+
+   label {
+    margin-block-start: 24px;
+    margin-inline-start: 16px;
+    font-weight: 600;
+    font-family: "Sofia Pro", Arial;
+   }
+   
+  input, select, button {
+    width: 295px;
+    height: 48px;
+    margin-inline: 16px;
+   }
+
+   button {
     margin-block-end: 30px;
+   }
+
+  .mobile-footer p {
+    margin-inline-start: 30px;
+    width: 316px;
+    font-family: "Sofia Pro", Arial;
+    font-weight: 500;
+    text-align: center;
+    padding-inline: 10px;
   }
 
-  footer p {
-    width: 300px;
-    text-align: center;
-    margin-inline-start: 38px;
-  }
+
 }
