@@ -72,7 +72,7 @@ body {
 
 .purpose {
   font-family: Brown-Regular, Arial;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-block-start: 50px;
 }
@@ -80,7 +80,7 @@ body {
 .paragraph {
   margin-block-start: 20px;
   font-family: Brown-Regular, Arial;
-  font-size: 1em;
+  font-size: 1rem;
   color: rgba(115, 115, 115, 1);
   width: 460px;
 }
@@ -113,13 +113,13 @@ body {
 label {
   display: block;
   font-family: "Sofia Pro", Arial;
-  font-size: 0.87em;
+  font-size: 0.87rem;
   font-weight: 600;
 }
 
 input, select {
   font-family: "Sofia Pro", Arial;
-  font-size: 0.87em;
+  font-size: 0.87rem;
   font-weight: 400;
   width: 238px;
   height: 48px;
@@ -131,7 +131,7 @@ input, select {
 
 .bottom-section label {
   font-family: "Sofia Pro", Arial;
-  font-size: 0.87em;
+  font-size: 0.87rem;
   margin-block-start: 30px;
 }
 
@@ -156,7 +156,7 @@ button {
   background-color: rgba(46, 196, 182, 1);
   color: rgba(255, 255, 255, 1);
   font-family: "Sofia Pro", Arial;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
   border: none;  
   margin-block-start: 30px;
@@ -166,7 +166,7 @@ footer {
   width: 463px;
   height: 25px;
   font-family: "Sofia Pro", Arial;
-  font-size: 0.87em;
+  font-size: 0.87rem;
   font-weight: 400;
   margin-inline-start: 58px;
   margin-block-start: 16px;
@@ -175,7 +175,7 @@ footer {
 footer a {
   color: rgba(46, 196, 182, 1);
   font-family: "Sofia Pro", Arial;
-  font-size: 0.87em;
+  font-size: 0.87rem;
   font-weight: 500;
 }
 
@@ -222,14 +222,14 @@ footer a {
    .purpose {
     width: 327px;
     height: 50px;
-    font-size: 1.85em;
+    font-size: 1.85rem;
     margin-block-start: 40px;
    }
 
    .mobile-paragraph {
     width: 330px;
     height: 50px;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 300;
    }
 
