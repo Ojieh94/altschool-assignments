@@ -196,7 +196,7 @@ footer a {
   visibility: visible;
   justify-content: space-between;
   align-items: center;
-  margin-inline-start: 20px;
+ 
 
   
   > div {
@@ -207,6 +207,7 @@ footer a {
     width: 54px;
     height: 14px;
     margin-block-start: 14px;
+    margin-inline-start: 32px;
    }
 
    > img {
@@ -247,16 +248,18 @@ footer a {
   }
 
    .purpose {
-    width: 327px;
+    max-width: 327px;
     height: 50px;
     font-size: 1.85rem;
     margin-block-start: 40px;
    }
-
+   .paragraph {
+    width: 375px;
+   }
    .mobile-paragraph {
     width: 327px;
     height: 50px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 300;
    }
 
